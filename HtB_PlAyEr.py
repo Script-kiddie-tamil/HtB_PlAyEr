@@ -8,8 +8,8 @@ def Cli():
     print("hi")
 
 def BrowserAutomation():
-    PlayerMail="karthikrajaofficial143@gmail.com"
-    PlayerPass="KARTHIK raja 143"
+    PlayerMail=""
+    PlayerPass=""
 
     Id_mail_in="email"
     Id_password_in="password"
