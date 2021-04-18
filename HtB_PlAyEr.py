@@ -1,11 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
 from selenium import webdriver
+import subprocess
 
 
 
-def Cli():
-    print("hi")
+
+def CheckSudo():
+    sudo_result=str(subprocess.check_call(['whoami']))
+
 
 def BrowserAutomation():
     PlayerMail="votake6916@zevars.com"
@@ -26,4 +29,8 @@ def BrowserAutomation():
     login_btn.click()
 
 
-BrowserAutomation()
+
+if (CheckSudo()=='root'):
+    print("Root Permission gotted")
+else:
+    print("root access kaali")
