@@ -1,0 +1,313 @@
+1619856355286	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilekuyBzF"
+Gtk-Message: 08:05:55.997: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 08:06:00.422: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 08:06:00.975: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 08:06:06.169: Failed to load module "appmenu-gtk-module"
+1619856366976	Marionette	INFO	Listening on port 39639
+1619856367287	Marionette	WARN	TLS certificate errors will be ignored for this session
+1619856367373	Marionette	ERROR	[18] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1619856426785	Marionette	INFO	Stopped listening on port 39639
+1619856435261	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileumourM"
+Gtk-Message: 08:07:15.637: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 08:07:18.175: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 08:07:18.613: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 08:07:21.172: Failed to load module "appmenu-gtk-module"
+1619856443468	Marionette	INFO	Listening on port 39627
+1619856443575	Marionette	WARN	TLS certificate errors will be ignored for this session
+1619856443631	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619856454572	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: resource://gre/modules/TelemetryUtils.jsm, line 159: TypeError: date is undefined
+1619856561078	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileJz90XI"
+Gtk-Message: 08:09:21.340: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 08:09:23.325: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 08:09:23.986: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 08:09:25.715: Failed to load module "appmenu-gtk-module"
+1619856569174	Marionette	INFO	Listening on port 35247
+1619856569284	Marionette	WARN	TLS certificate errors will be ignored for this session
+1619856569327	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619856580193	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1619856621759	Marionette	INFO	Stopped listening on port 35247
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619856623716	Marionette	INFO	Stopped listening on port 39627
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1619856786143	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilee7HS55"
+Gtk-Message: 08:13:06.474: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 08:13:08.489: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 08:13:08.589: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 08:13:10.576: Failed to load module "appmenu-gtk-module"
+1619856792471	Marionette	INFO	Listening on port 32883
+1619856792660	Marionette	WARN	TLS certificate errors will be ignored for this session
+1619856792688	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619856803762	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1619856861546	Marionette	INFO	Stopped listening on port 32883
+1619856889130	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilenKzb0p"
+Gtk-Message: 08:14:49.378: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 08:14:51.492: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 08:14:51.776: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 08:14:53.239: Failed to load module "appmenu-gtk-module"
+1619856895269	Marionette	INFO	Listening on port 41203
+1619856895411	Marionette	WARN	TLS certificate errors will be ignored for this session
+1619856895448	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1619856911979	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+JavaScript error: https://www.hackthebox.eu/home, line 1: TypeError: conversations is undefined
+JavaScript error: https://www.hackthebox.eu/home, line 1: TypeError: response is undefined
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1619857071879	Marionette	INFO	Stopped listening on port 41203
+1620040015088	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileXhsVSF"
+Gtk-Message: 11:06:55.400: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 11:06:58.926: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 11:06:59.494: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 11:07:01.671: Failed to load module "appmenu-gtk-module"
+1620040025303	Marionette	INFO	Listening on port 34159
+1620040025639	Marionette	WARN	TLS certificate errors will be ignored for this session
+1620040025710	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620040035851	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1620040203263	Marionette	INFO	Stopped listening on port 34159
+1621221349949	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilev74zLY"
+Gtk-Message: 03:15:50.854: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 03:15:58.869: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 03:15:59.614: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 03:16:06.021: Failed to load module "appmenu-gtk-module"
+1621221366234	Marionette	INFO	Listening on port 43385
+1621221366801	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621221366837	Marionette	ERROR	[18] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621221377908	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+JavaScript error: , line 0: NotFoundError: No such JSWindowActor 'MarionetteEvents'
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1621221467002	Marionette	INFO	Stopped listening on port 43385
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1621221476748	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileL8kYgZ"
+Gtk-Message: 03:17:57.220: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 03:17:59.612: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 03:18:00.270: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 03:18:02.962: Failed to load module "appmenu-gtk-module"
+1621221485502	Marionette	INFO	Listening on port 36021
+1621221485641	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621221485686	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621221496598	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1621221537850	Marionette	INFO	Stopped listening on port 36021
+1621221602220	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilese7bMH"
+Gtk-Message: 03:20:02.769: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 03:20:05.175: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 03:20:05.307: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 03:20:07.826: Failed to load module "appmenu-gtk-module"
+1621221609693	Marionette	INFO	Listening on port 46525
+1621221609864	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621221609973	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621221620351	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: AbortError: The operation was aborted. 
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1621221700672	Marionette	INFO	Stopped listening on port 46525
+1621221833618	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileIfRQq0"
+Gtk-Message: 03:23:53.891: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 03:23:56.099: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 03:23:56.440: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 03:23:58.812: Failed to load module "appmenu-gtk-module"
+1621221840852	Marionette	INFO	Listening on port 36517
+1621221841055	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621221841124	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1621221927791	Marionette	INFO	Stopped listening on port 36517
+1621222052810	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile7DD0QC"
+Gtk-Message: 03:27:33.220: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 03:27:35.586: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 03:27:36.153: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 03:27:38.098: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621222061656	Marionette	INFO	Listening on port 36607
+1621222061819	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621222061889	Marionette	ERROR	[18] No reply from Marionette:Register
+Gtk-Message: 03:27:42.200: Failed to load module "appmenu-gtk-module"
+JavaScript error: https://crypt.parrot.sh/bower_components/requirejs/require.js?ver=2.3.5, line 168: Error: Script error for "/api/config?cb=179785d87b4", needed by: /common/boot.js?ver=1.0
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://parrotsec.org/js/script.min.js, line 1: TypeError: $(...).magnificPopup is not a function
+1621222077698	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1621222161020	Marionette	INFO	Stopped listening on port 36607
+1621222213387	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileDaXdfP"
+Gtk-Message: 03:30:13.749: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 03:30:15.925: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 03:30:16.402: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 03:30:18.360: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621222221103	Marionette	INFO	Listening on port 44607
+1621222221227	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621222221277	Marionette	ERROR	[15] No reply from Marionette:Register
+Gtk-Message: 03:30:21.697: Failed to load module "appmenu-gtk-module"
+JavaScript error: https://parrotsec.org/js/script.min.js, line 1: TypeError: $(...).magnificPopup is not a function
+1621222242856	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+
+###!!! [Parent][DispatchAsyncMessage] Error: PBackgroundIDBDatabase::Msg_PBackgroundIDBTransactionConstructor Value error: message was deserialized, but contained an illegal value
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+JavaScript error: https://nextcloud.com/wp-content/themes/next/node_modules/requirejs/require.min.js?x53054, line 17: Error: Script error for "bodymovin", needed by: modules/header
+http://requirejs.org/docs/errors.html#scripterror
+JavaScript error: https://nextcloud.com/wp-content/themes/next/node_modules/jquery/dist/jquery.min.js, line 2: NS_ERROR_NOT_INITIALIZED: 
+1621222291406	Marionette	INFO	Stopped listening on port 44607
+1621249991254	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileiHe5Hg"
+Gtk-Message: 11:13:11.938: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 11:13:16.573: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 11:13:17.218: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 11:13:19.093: Failed to load module "appmenu-gtk-module"
+1621250001610	Marionette	INFO	Listening on port 46881
+1621250002002	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621250002093	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+JavaScript error: https://platform.twitter.com/widgets/widget_iframe.06c6ee58c3810956b7509218508c7b56.html?origin=https%3A%2F%2Fwww.hackthebox.eu, line 18: Error: Network error.
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1621250127897	Marionette	INFO	Stopped listening on port 46881
+1621257743612	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilemqfU5V"
+Gtk-Message: 13:22:23.839: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 13:22:26.874: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 13:22:27.439: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621257750778	Marionette	INFO	Listening on port 37019
+1621257750934	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621257750981	Marionette	ERROR	[15] No reply from Marionette:Register
+Gtk-Message: 13:22:31.141: Failed to load module "appmenu-gtk-module"
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+console.warn: services.settings: main/message-groups sync interrupted by shutdown
+console.warn: SearchService: "_init: abandoning init due to shutting down"
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+console.warn: services.settings: main/cfr-fxa sync interrupted by shutdown
+console.warn: services.settings: main/cfr sync interrupted by shutdown
+console.warn: services.settings: main/message-groups sync interrupted by shutdown
+1621257753545	Marionette	INFO	Stopped listening on port 37019
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+JavaScript error: resource://gre/modules/CrashManager.jsm, line 789: AbortError: Could not dispatch task to background thread
+ExceptionHandler::GenerateDump cloned child 29418
+ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+1621320498857	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileIJ4tgi"
+Gtk-Message: 06:48:19.335: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 06:48:23.218: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 06:48:23.626: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621320510459	Marionette	INFO	Listening on port 34381
+Gtk-Message: 06:48:30.582: Failed to load module "appmenu-gtk-module"
+1621320510740	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621320510796	Marionette	ERROR	[18] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621320521066	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1621320731010	Marionette	INFO	Stopped listening on port 34381
+1621326901981	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofilel7phP7"
+Gtk-Message: 08:35:02.207: Failed to load module "appmenu-gtk-module"
+console.error: Enterprise Policies: 
+  Error parsing JSON file
+Gtk-Message: 08:35:04.475: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 08:35:04.855: Failed to load module "appmenu-gtk-module"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+Gtk-Message: 08:35:06.433: Failed to load module "appmenu-gtk-module"
+1621326908580	Marionette	INFO	Listening on port 33139
+1621326908656	Marionette	WARN	TLS certificate errors will be ignored for this session
+1621326908695	Marionette	ERROR	[15] No reply from Marionette:Register
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1621326929003	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PMessagePort::Msg_PostMessages Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+JavaScript error: https://www.hackthebox.eu/js/htb-frontend.min.js, line 1: TypeError: n is null
+JavaScript error: https://www.hackthebox.eu/js/htb-frontend.min.js, line 1: TypeError: n is null
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 987: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+1621326944294	Marionette	INFO	Stopped listening on port 33139

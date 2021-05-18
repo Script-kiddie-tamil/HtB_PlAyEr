@@ -1,13 +1,10 @@
-import requests
-from bs4 import BeautifulSoup
 from selenium import webdriver
 import subprocess
 from credential import credential
-import getpass
+from credential import BruteforceInfo
 import os
 import colored
 import pyautogui
-import sys
 import time
 import re
 
@@ -33,7 +30,7 @@ def Intro():
 
 
 
-def BrowserAutomation():
+def FlagSubmitViaBrowser():
     ""
     Id_mail_in="email"
     Id_password_in="password"
@@ -47,25 +44,25 @@ def BrowserAutomation():
     idget2.send_keys(credential.PlayerPass)
     btn_name="pull-right"
     login_btn=browser.find_element_by_class_name(btn_name)
-    login_btn.press()
+    login_btn.click()
     login_btn=browser.find_element_by_class_name("pull-left")
     login_btn.click()
-    browser.get("https://www.hackthebox.eu/home/machines")
-    machin_name=browser.find_element_by_class_name("machine-effect")
-    # for mach in machin_name:
-    title=machin_name.find_element_by_xpath("/html/body/div[2]/section/div[2]/div[4]/div/div[3]/div/div[3]/div[3]/div[2]")
-    print(title)
+    browser.get("https://www.hackthebox.eu/home/machines/profile/"+idd[0])
+    time.sleep(5)
+    pyautogui.hotkey('alt','tab')
 
 def ActivatingOpenvpn():
-    pyautogui.typewrite("sudo -v",interval=0.1)
+    time.sleep(2)
+    pyautogui.hotkey('ctrl','shift','t')
+    pyautogui.typewrite("sudo -v",interval=0.2)
     pyautogui.press("enter")
     pyautogui.typewrite(credential.AdminPass,interval=0.1)
     pyautogui.press("enter")
-    pyautogui.typewrite("sudo xterm -hold -e 'openvpn HtB0PlAyEr.ovpn' &",interval=0.1)
+    pyautogui.typewrite("sudo openvpn HtB0PlAyEr.ovpn ",interval=0.1)
     pyautogui.press("enter")
-    pyautogui.hotkey('alt','tab')
+    time.sleep(4)
+    pyautogui.hotkey('shift','left')
     time.sleep(5)
-    pyautogui.hotkey('alt','tab')
     # os.system("sudo xterm -hold -e 'openvpn HtB0PlAyEr.ovpn &' -S ")
 
 def CheckingBoxesCli():
@@ -78,43 +75,69 @@ def CheckingBoxesCli():
 
 def AccessingBoxes(boxname):
     "hi"
+    os.system("htb info -a "+boxname)
+    input("Press enter")
     for_ip=subprocess.check_output("htb info -a "+boxname+"|grep 10.10.10",shell=True)
     global ip
     ip=re.findall(r"10.10.10.* ",str(for_ip))
-
+    for_id=subprocess.check_output("htb info -a "+boxname+"|grep 'id             │'",shell=True)
+    global idd
+    idd=re.findall(r"\d\d\d",str(for_id))
 
 
 def IpChecking():
     "hi"
-    tun_ip=subprocess.call("$(ip addr show tun0 | awk '/inet / {print $2}' | cut -d/ -f 1)",shell=True)
+    global tun_ip
+    tun_ip=str(subprocess.call('''echo "$(ip addr show tun0 | awk '/inet / {print $2}' | cut -d/ -f 1) " ''',shell=True))
 
 
-def MakingDir():
+def MakingDir(boxn):
     "hi"
+    os.chdir("/home/"+credential.AdminDefaultUser+"/HTB")
+    def CheckingDirExist():
+        if os.path.exists(boxn)==True:
+            return 1
+        else:
+            return 0
+    if CheckingDirExist()==1:
+        pass
+    else:
+        os.mkdir(boxn)
+        os.chdir(boxn)
+        os.system("pwd")
 
-def NmapScan():
-        # get IP
-        os.system('nmap '+ip+' -oA normalscan')
-        # seperating opened ports
-        os.system("cat normalscan.nmap | grep open | awk -F/ '{print $1}' ORS=',' | rev | cut -c 2- | rev > opened-ports.txt")
-        # opening ports file
-        f=open("opened-ports.txt", "r")
-        ports = f.read()
-        print("\nOPENED PORTS:")
-        print(ports)
-        # scanning only the opened ports
-        os.system('nmap -sC -sV '+ip+' -p'+ports)
-        # deleting extra files ( I used -oN flag but it took more time than -oA. So, I used -oA and deleting the extra stuffs here )
-        os.system('rm opened-ports.txt normalscan.gnmap normalscan.xml normalscan.nmap')
+def Bruteforce(boxname):
+    "hi"
+    os.system("gobuster dir -u "+ip[0]+" -t "+BruteforceInfo.threads+" -e -w "+BruteforceInfo.wordlist+" -o ~/HTB/"+boxname+"/"+boxname+"Wordlist.txt")
 
+def NmapScan(boxname):
+    # get IP
+    os.system('nmap '+str(ip[0])+' -oA normalscan')
+    # seperating opened ports
+    os.system("cat normalscan.nmap | grep open | awk -F/ '{print $1}' ORS=',' | rev | cut -c 2- | rev > opened-ports.txt")
+    # opening ports file
+    f=open("opened-ports.txt", "r")
+    ports = f.read()
+    print("\nOPENED PORTS:")
+    print(ports)
+    # scanning only the opened ports
+    os.system('nmap -sC -sV '+ip[0]+' -p'+ports+' -oN '+boxname+'Nmap.txt')
+    # deleting extra files ( I used -oN flag but it took more time than -oA. So, I used -oA and deleting the extra stuffs here )
+    os.system('rm opened-ports.txt normalscan.gnmap normalscan.xml normalscan.nmap')
 
+def FinishingTouch():
+    os.system('figlet -f slant "Bella Ciao"')
 
 Intro()
+CheckingBoxesCli()
+box_id=str(input("Enter the box name: "))
+AccessingBoxes(box_id.capitalize())
 ActivatingOpenvpn()
+IpChecking()
+MakingDir(box_id.capitalize())
+Bruteforce(box_id.capitalize())
+NmapScan(box_id.capitalize())
+FlagSubmitViaBrowser()
+FinishingTouch()
 
-BrowserAutomation()
-NmapScan()
-# CheckingBoxesCli()
-# box_id=str(input("Enter the box name: "))
-# AccessingBoxes(box_id)
-# IpChecking()
+
