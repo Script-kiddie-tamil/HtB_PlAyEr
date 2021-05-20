@@ -11,19 +11,14 @@ import re
 
 
 
-def ColoredVariables():
-    "ColoredVariables() function is used to Adding colors to the text ,I'm Functional Loving programmer Thus only I'm creating this function"
+# def ColoredVariables():
+#     "ColoredVariables() function is used to Adding colors to the text ,I'm Functional Loving programmer Thus only I'm creating this function"
 
-    global red
-    red=colored.fg("red_1")
-    global green
-    green=colored.fg("chartreuse_2a")
-    global orange
-    orange=colored.fg("orange_1")
-    global yellow
-    yellow=colored.fg("yellow_1")
-    global reset
-    reset=colored.attr("reset")
+red=colored.fg("red_1")
+green=colored.fg("chartreuse_2a")
+orange=colored.fg("orange_1")
+yellow=colored.fg("yellow_1")
+reset=colored.attr("reset")
 
 def Intro():
     "Intro for htB_PlAyEr,And some Kind of Adayalam"
@@ -70,7 +65,7 @@ def ActivatingOpenvpn():
     pyautogui.press("enter")
     time.sleep(4)
     pyautogui.hotkey('shift','left')
-    time.sleep(5)
+    time.sleep(7)
     # os.system("sudo xterm -hold -e 'openvpn HtB0PlAyEr.ovpn &' -S ")
 
 def CheckingBoxesCli():
@@ -90,7 +85,9 @@ def AccessingBoxes(boxname):
     input("Press enter")
     for_ip=subprocess.check_output("htb info -a "+boxname+"|grep 10.10.10",shell=True)
     global ip
-    ip=re.findall(r"10.10.10.* ",str(for_ip))
+    ip_with=re.findall(r"10.10.10.* ",str(for_ip))
+    ip_withoo=str(ip_with[0])
+    ip=ip_withoo.strip()
     for_id=subprocess.check_output("htb info -a "+boxname+"|grep 'id             │'",shell=True)
     global idd
     idd=re.findall(r"\d\d\d",str(for_id))
@@ -120,12 +117,12 @@ def MakingDir(boxn):
 def Bruteforce(boxname):
     "Bruteforce() function is used to Bruteforce the Box on 80 port "
 
-    os.system("gobuster dir -u "+ip[0]+" -t "+BruteforceInfo.threads+" -e -w "+BruteforceInfo.wordlist+" -o ~/HTB/"+boxname+"/"+boxname+"Wordlist.txt")
+    os.system("gobuster dir -u "+ip+":"+port+" -t "+BruteforceInfo.threads+" -e -w "+BruteforceInfo.wordlist+" -o ~/HTB/"+boxname+"/"+boxname+"Wordlist.txt")
 
 def NmapScan(boxname):
     "NmapScan() function is used to Scan the Box for version of the port runing And this code was @JoPraveen's HTBScan with Little Customization"
     # get IP
-    os.system('nmap '+str(ip[0])+' -oA normalscan')
+    os.system('nmap '+str(ip)+' -oA normalscan')
     # seperating opened ports
     os.system("cat normalscan.nmap | grep open | awk -F/ '{print $1}' ORS=',' | rev | cut -c 2- | rev > opened-ports.txt")
     # opening ports file
@@ -135,13 +132,13 @@ def NmapScan(boxname):
     print(ports)
     os.system('rm normalscan.gnmap normalscan.xml normalscan.nmap')
     # scanning only the opened ports
-    os.system('nmap -sC -sV '+ip[0]+' -oA '+boxname+'Nmap'+' -p'+ports)
+    os.system('nmap -sC -sV '+ip+' -oA '+boxname+'Nmap'+' -p'+ports)
     # deleting extra files ( I used -oN flag but it took more time than -oA. So, I used -oA and deleting the extra stuffs here )
     os.system('rm opened-ports.txt '+boxname+'Nmap.gnmap '+boxname+'Nmap.xml ')
 
 def OpeningBoxIpOnBrowser():
     browser=webdriver.Firefox()
-    browser.get('http://'+ip[0])
+    browser.get('http://'+ip+':'+port)
     pyautogui.hotkey('ctrl','shift','c')
     time.sleep(2)
     pyautogui.hotkey('alt','tab')
@@ -162,26 +159,38 @@ def FinishingTouch():
         # print(f.read())
         os.system("cat "+box_id.capitalize()+"Nmap.Nmap")
 
-    print('''
-'''yellow+'''SomeInfo:
+    print(str('''
+''')+yellow+str('''SomeInfo:
 
-         BoxName          : '''+orange+box_id.capitalize()+reset+'''
+         BoxName          : ''')+orange+box_id.capitalize()+reset+str('''
 
-         Box Ip           : '''+red+ip[0]+reset+'''
+         Box Ip           : ''')+red+ip+reset+str('''
 
-         OpenVpn Status   : '''+green+'''Connected'''+reset+'''
+         OpenVpn Status   : ''')+green+'''Connected'''+reset+str('''
 
-         OpenVpn          : '''+red+tun_ip+reset+'''
+         OpenVpn          : ''')+red+tun_ip+reset+str('''
 
-         BruteForceResult : '''+CatBruteForceResult()+'''
+         BruteForceResult : 
+                            ===============================================================
+                            Gobuster v3.0.1
+                            ===============================================================
+                            [+] Url:            http://''')+str(ip)+''':'''+port+str('''
+                            [+] Threads:        ''')+str(BruteforceInfo.threads)+str('''
+                            [+] Wordlist:       ''')+str(BruteforceInfo.wordlist)+str('''
+                            [+] Status codes:   200,204,301,302,307,401,403
+                            [+] User Agent:     gobuster/3.0.1
+                            [+] Expanded:       true
+                            [+] Timeout:        Not Mentioned
+                            ===============================================================
+                            Starting gobuster
+                            ===============================================================
+''')+CatBruteForceResult()+str('''
 
-         Nmap Result      : '''+CatNmapResult()+'''
+         Nmap Result      : ''')+CatNmapResult()+str('''
 
-         Browser Status   : '''+green+'''ON'''+reset+'''
+         Browser Status   : ''')+str('''ON''')+reset)
 
-          ''')
-
-ColoredVariables()
+# ColoredVariables()
 Intro()
 CheckingBoxesCli()
 global box_id
@@ -190,10 +199,14 @@ AccessingBoxes(box_id.capitalize())
 ActivatingOpenvpn()
 IpChecking()
 MakingDir(box_id.capitalize())
+NmapScan(box_id.capitalize())
+global port
+port=str(input("Enter The Http port Number: "))
 OpeningBoxIpOnBrowser()
 Bruteforce(box_id.capitalize())
-NmapScan(box_id.capitalize())
 FlagSubmitViaBrowser()
 FinishingTouch()
+
+
 
 
