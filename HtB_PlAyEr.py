@@ -28,7 +28,7 @@ def Intro():
 | |_| | __|  _ \   | |_) | | / _ \| | | |  _| | '__|
 |  _  | |_| |_) |  |  __/| |/ ___ \ |_| | |___| |
 |_| |_|\__|____/___|_|   |_/_/   \_\__, |_____|_|
-              |_____|              |___/            '''+green+'''V1.Dc to '''+orange+'''0xAjay('''+yellow+'''Tamilhackz'''+orange+''')'''+reset+'''''')
+              |_____|              |___/            '''+green+'''V1.Dc to '''+orange+'''0xAjay('''+yellow+'''Tamilhackz'''+orange+''')'''+reset)
 
 def FlagSubmitViaBrowser():
     "FlagSubmitViaBrowser function is  used to Sumbit the flag via"
@@ -82,7 +82,7 @@ def AccessingBoxes(boxname):
     "AccessingBoxes() function is used to Access the Player wanted Box Via Cli With Detail Info"
 
     os.system("htb info -a "+boxname)
-    input("Press enter")
+    # input("Press enter")
     for_ip=subprocess.check_output("htb info -a "+boxname+"|grep 10.10.10",shell=True)
     global ip
     ip_with=re.findall(r"10.10.10.* ",str(for_ip))
@@ -109,6 +109,7 @@ def MakingDir(boxn):
             return 0
     if CheckingDirExist()==1:
         os.chdir(boxn)
+        os.system("pwd")
     else:
         os.mkdir(boxn)
         os.chdir(boxn)
@@ -143,40 +144,40 @@ def OpeningBoxIpOnBrowser():
     time.sleep(2)
     pyautogui.hotkey('alt','tab')
 
+
+# def CatBruteForceResult():
+#     "hi"
+#     # f = open(box_id.capitalize()+"Wordlist.txt", "r")
+#     # print(f.read())
+#     os.system("cat "+box_id.capitalize()+"Wordlist.txt")
+# def CatNmapResult():
+#     "hi"
+#     # f = open(box_id.capitalize()+"Nmap.Nmap", "r")
+#     # print(f.read())
+#     os.system("cat "+box_id.capitalize()+"Nmap.Nmap")
+
 def FinishingTouch():
     "FinishingTouch Holds oveerall Information "
     os.system('clear')
     os.system('figlet -f slant "Bella Ciao"')
     os.system("htb info -a "+box_id)
-    def CatBruteForceResult():
-        "hi"
-        # f = open(box_id.capitalize()+"Wordlist.txt", "r")
-        # print(f.read())
-        os.system("cat "+box_id.capitalize()+"Wordlist.txt")
-    def CatNmapResult():
-        "hi"
-        # f = open(box_id.capitalize()+"Nmap.Nmap", "r")
-        # print(f.read())
-        os.system("cat "+box_id.capitalize()+"Nmap.Nmap")
+    print(yellow+'''SomeInfo:'''+reset+'''
 
-    print(str('''
-''')+yellow+str('''SomeInfo:
+         BoxName          : '''+orange+box_id.capitalize()+reset+'''
 
-         BoxName          : ''')+orange+box_id.capitalize()+reset+str('''
+         Box Ip           : '''+red+ip+reset+'''
 
-         Box Ip           : ''')+red+ip+reset+str('''
+         OpenVpn Status   : '''+green+'''Connected'''+reset+'''
 
-         OpenVpn Status   : ''')+green+'''Connected'''+reset+str('''
-
-         OpenVpn          : ''')+red+tun_ip+reset+str('''
+         OpenVpn          : '''+red+tun_ip[0]+reset+'''
 
          BruteForceResult : 
                             ===============================================================
                             Gobuster v3.0.1
                             ===============================================================
-                            [+] Url:            http://''')+str(ip)+''':'''+port+str('''
-                            [+] Threads:        ''')+str(BruteforceInfo.threads)+str('''
-                            [+] Wordlist:       ''')+str(BruteforceInfo.wordlist)+str('''
+                            [+] Url:            http://'''+str(ip)+''':'''+port+'''
+                            [+] Threads:        '''+str(BruteforceInfo.threads)+'''
+                            [+] Wordlist:       '''+str(BruteforceInfo.wordlist)+'''
                             [+] Status codes:   200,204,301,302,307,401,403
                             [+] User Agent:     gobuster/3.0.1
                             [+] Expanded:       true
@@ -184,29 +185,44 @@ def FinishingTouch():
                             ===============================================================
                             Starting gobuster
                             ===============================================================
-''')+CatBruteForceResult()+str('''
+    ''')
+    f = open(box_id.capitalize()+"Wordlist.txt", "r")
+    file=str(f.read())
+    print(str("                            ")+file)
 
-         Nmap Result      : ''')+CatNmapResult()+str('''
+    print('''
 
-         Browser Status   : ''')+str('''ON''')+reset)
+         Nmap Result      : ''')
+
+    f1 = open(box_id.capitalize()+"Nmap.nmap", "r")
+    filen=str(f1.read())
+    print(str("                            ")+filen)
+        # print(str("                            ")+f.read())
+    print(str('''
+
+         Browser Status   : ''')+green+'''ON'''+reset)
 
 # ColoredVariables()
 Intro()
-CheckingBoxesCli()
+# CheckingBoxesCli()
 global box_id
 box_id=str(input("Enter the box name: "))
 AccessingBoxes(box_id.capitalize())
-ActivatingOpenvpn()
+# ActivatingOpenvpn()
 IpChecking()
 MakingDir(box_id.capitalize())
-NmapScan(box_id.capitalize())
+# NmapScan(box_id.capitalize())
 global port
 port=str(input("Enter The Http port Number: "))
-OpeningBoxIpOnBrowser()
-Bruteforce(box_id.capitalize())
-FlagSubmitViaBrowser()
+# OpeningBoxIpOnBrowser()
+# Bruteforce(box_id.capitalize())
+# FlagSubmitViaBrowser()
 FinishingTouch()
 
 
 
+# print(type(box_id.capitalize()))
+# print(type(CatBruteForceResult()))
+# print(type(yellow))
 
+# hi=str(os.system("cat "+box_id.capitalize()+"Nmap.nmap"))
