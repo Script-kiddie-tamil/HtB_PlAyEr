@@ -204,19 +204,19 @@ def FinishingTouch():
 
 # ColoredVariables()
 Intro()
-# CheckingBoxesCli()
+CheckingBoxesCli()
 global box_id
 box_id=str(input("Enter the box name: "))
 AccessingBoxes(box_id.capitalize())
-# ActivatingOpenvpn()
+ActivatingOpenvpn()
 IpChecking()
 MakingDir(box_id.capitalize())
-# NmapScan(box_id.capitalize())
+NmapScan(box_id.capitalize())
 global port
 port=str(input("Enter The Http port Number: "))
-# OpeningBoxIpOnBrowser()
-# Bruteforce(box_id.capitalize())
-# FlagSubmitViaBrowser()
+OpeningBoxIpOnBrowser()
+Bruteforce(box_id.capitalize())
+FlagSubmitViaBrowser()
 FinishingTouch()
 
 
